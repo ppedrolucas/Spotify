@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: #000;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .sidebar {
@@ -34,7 +35,7 @@ body {
   padding: 0 20px 10px 20px;
 }
 
-.sidebar nav ul li {
+.sidebar ul li {
   padding: 10px 0;
 }
 
@@ -44,99 +45,100 @@ body {
   font-weight: 600;
   font-size: 14px;
 }
-/*Desafio do Crie sua biblioteca*/
+
 .library {
   background-color: #121212;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  min-block-size: 40px;
+  flex-direction: column;
   padding: 4px 8px;
   color: #b3b3b3;
   font-weight: 600;
   font-size: 14px;
   margin-top: 10px;
-  flex-direction: column;
 }
 
-.library .library__button {
+.library .library-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.library .library-btn {
+  display: flex;
   margin-right: 10px;
   color: #b3b3b3;
   background-color: transparent;
-  border: 0px;
-  font-size: 1rem;
+  border: 0;
+  font-size: 14px;
   font-weight: 700;
-
+  font-family: "Inter", sans-serif;
   text-align: center;
   text-decoration: none;
   text-transform: none;
   padding: 20px 10px;
-  display: flex;
 }
 
-.library .library__button .fa {
+.library .library-btn .fa {
   font-size: 20px;
   margin-right: 10px;
   padding-right: 8px;
 }
 
-.library__content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.library .library__content .fa-plus {
+.library .library-content .fa-plus {
   margin: 24px 10px;
 }
 
 .section-playlist {
-  background-color: #242424;
-  align-items: flex-start;
-  border-radius: 8px;
-  gap: 20px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  min-block-size: 40px;
+  gap: 20px;
+  background-color: #242424;
   color: #b3b3b3;
   font-weight: 600;
   font-size: 14px;
   margin: 8px 0;
   padding: 16px 20px;
+  border-radius: 10px;
 }
 
-.section-playlist .section-playlist__content {
+.section-playlist .section-playlist-content {
   display: flex;
   flex-direction: column;
 }
 
-.section-playlist__content .text {
+.section-playlist-content .text {
   padding-bottom: 14px;
   color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
-.section-playlist__content .title {
+.section-playlist-content .title {
   font-weight: 700;
 }
 
-.section-playlist__content .subtitle {
+.section-playlist-content .subtitle {
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
-.section-playlist__content .section-playlist__button {
-  background-color: #ffffff;
-  color: #000;
-  border-radius: 9999px;
+.section-playlist-content .section-playlist-btn {
   display: flex;
-  font-size: 0.8rem;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 20px;
+  font-size: 12px;
   font-weight: 700;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   text-transform: none;
   padding: 10px;
-  border: 0px;
-  width: 113px;
-  justify-content: center;
   margin-top: 12px;
+  border: 0;
+  width: 113px;
+  cursor: pointer;
 }
 
 .sidebar .cookies {
@@ -146,23 +148,24 @@ body {
 .sidebar .cookies a {
   color: #b3b3b3;
   font-weight: 500;
-  text-decoration: none;
   font-size: 10px;
+  text-decoration: none;
 }
 
 .sidebar .cookies a:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
-.languages .languages__button {
-  background-color: transparent;
-  border-radius: 9999px;
-  border: 1px solid #878787;
-  color: #fff;
-  cursor: pointer;
+.languages .languages-btn {
   align-items: center;
-  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #878787;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
   width: 170px;
   margin: 8px;
-  font-weight: bold;
+  padding: 8px;
 }
