@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  /* FONT */
+  --font-inter: "Inter", sans-serif;
+
+  /* COLORS */
+  --color-primary: #fff;
+  --color-primary-2: #a7a7a7;
+  --color-dark: #000;
+  --bg-dark: #121212;
+  --bg-dark-secondary: #242424;
+  --bg-icon: #131313;
+  --bg-arrow-color: rgba(0, 0, 0.7);
+}
+::-webkit-scrollbar {
+  /*Personalizar a barra de rolagem*/
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  /*Caminho onde a barra percorre*/
+  background-color: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+}

@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/vars.css" />
+    <link rel="stylesheet" href="src/css/main-content.css" />
+    <link rel="stylesheet" href="src/css/sidebar-footer.css" />
+    <link rel="icon" href="src/assets/icons/favicon.png" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/1e32b8079d.js"
       crossorigin="anonymous"
@@ -17,7 +19,10 @@
       <nav class="sidebar-navigation">
         <div class="logo">
           <a href="#">
-            <img src="assets/icons/logo-spotify.png" alt="Logo do Spotify" />
+            <img
+              src="src/assets/icons/logo-spotify.png"
+              alt="Logo do Spotify"
+            />
           </a>
         </div>
         <ul>
@@ -66,7 +71,7 @@
           <a href="#" class="tag" id="year"></a>
           <a href="#" class="tag">Açaí</a>
           <a href="#" class="tag">Alura</a>
-          <a href="#" class="tag">Lá ele</a>
+          <a href="#" class="tag awp">AWP Entertainment</a>
         </div>
 
         <div class="languages">
@@ -77,6 +82,57 @@
         </div>
       </div>
     </div>
+
+    <main>
+      <div class="main-container">
+        <nav class="header-navigation">
+          <div class="navigation">
+            <button class="arrow-left">
+              <img
+                src="src/assets/icons/small-left.png"
+                alt="Seta virada para esquerda"
+              />
+            </button>
+            <button class="arrow-right">
+              <img
+                src="src/assets/icons/small-right.png"
+                alt="Seta virada para direita"
+              />
+            </button>
+          </div>
+
+          <div class="header-search">
+            <img src="src/assets/icons/search.png" alt="" />
+            <input
+              id="search-input"
+              type="text"
+              maxlength="800"
+              placeholder="As ordens meu patrão, o que você quer ouvir?"
+            /><!--maxlength limita a quantidade de caracteres-->
+          </div>
+
+          <div class="header-login">
+            <button class="subscribe">Inscreva-se</button>
+            <button class="login">Entrar</button>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <span class="footer-text">
+          <p class="footer-title">Testar o Premium de graça</p>
+          <p>
+            Inscreva-se para curtir música ilimitada e podcasts só com alguns
+            anúncios. Não precisa de cartão de crédito.
+          </p>
+        </span>
+        <button class="footer-btn">
+          <span>Inscreva-se gratis</span>
+        </button>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

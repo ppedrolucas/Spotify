@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: #000;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter);
+}
+
+button {
+  font-family: var(--font-inter);
 }
 
 .sidebar {
@@ -75,7 +78,6 @@ body {
   border: 0;
   font-size: 14px;
   font-weight: 700;
-  font-family: "Inter", sans-serif;
   text-align: center;
   text-decoration: none;
   text-transform: none;
@@ -120,7 +122,6 @@ body {
 .section-playlist-content .text {
   padding-bottom: 14px;
   color: #fff;
-  font-family: "Inter", sans-serif;
 }
 
 .section-playlist-content .title {
@@ -140,7 +141,6 @@ body {
   border-radius: 20px;
   font-size: 12px;
   font-weight: 700;
-  font-family: "Inter", sans-serif;
   text-decoration: none;
   text-transform: none;
   padding: 10px;
@@ -172,8 +172,13 @@ body {
   padding: 16px 0;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 4px;
+  gap: 8px;
 }
+
+.awp {
+  grid-column: span 2;
+}
+
 .tags .tag {
   font-weight: 400;
   background-color: rgba(255, 255, 255, 0.1);
@@ -203,4 +208,41 @@ body {
   width: 170px;
   margin: 8px;
   padding: 8px;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  position: absolute;
+  position: fixed;
+  bottom: 0;
+}
+footer .footer {
+  /*margin: 0 12px 12px 12px;*/
+  padding: 16px;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1d2b53, #7e2553, #ff004d, #faef5d);
+}
+.footer .footer-text .footer-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+.footer .footer-btn {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+  padding: 12px 20px;
+  border: 0;
+  cursor: pointer;
 }
