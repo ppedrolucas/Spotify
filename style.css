@@ -41,6 +41,8 @@ body {
 
 .sidebar nav ul li a {
   color: #b3b3b3;
+  display: flex; /*Acrescimo meu*/
+  gap: 8px; /*Acrescimo meu*/
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -66,6 +68,7 @@ body {
 
 .library .library-btn {
   display: flex;
+  align-items: center; /*Acrescimo meu*/
   margin-right: 10px;
   color: #b3b3b3;
   background-color: transparent;
@@ -87,6 +90,12 @@ body {
 
 .library .library-content .fa-plus {
   margin: 24px 10px;
+}
+
+.library-content .fa-plus:hover {
+  /*Acrescimo meu*/
+  color: #fff;
+  cursor: pointer;
 }
 
 .section-playlist {
@@ -156,6 +165,32 @@ body {
   text-decoration: underline;
   color: #fff;
 }
+
+/*Acrescimo meu*/
+.sidebar .tags {
+  display: grid;
+  padding: 16px 0;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 4px;
+}
+.tags .tag {
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #878787;
+  padding: 4px 8px;
+  transition: 0.4s;
+}
+
+.tags .tag:hover {
+  background: transparent;
+  color: #878787;
+}
+/*Fim das Tags*/
 
 .languages .languages-btn {
   align-items: center;
