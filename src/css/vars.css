@@ -2,11 +2,13 @@
 :root {
   /* FONT */
   --font-inter: "Inter", sans-serif;
+  --font-size: 16px;
 
   /* COLORS */
   --color-primary: #fff;
   --color-primary-2: #a7a7a7;
-  --color-dark: #000;
+  --color-primary-3: rgba(255, 255, 255, 0.102);
+  --blackout: #000;
   --bg-dark: #121212;
   --bg-dark-secondary: #242424;
   --bg-icon: #131313;
@@ -23,5 +25,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-dark-secondary);
 }

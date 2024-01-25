@@ -1,6 +1,10 @@
 body {
-  background-color: #000;
+  background-color: var(--blackout);
   font-family: var(--font-inter);
+  display: grid;
+  grid-template-columns: 395px 1fr;
+  grid-template-rows: 80px 1fr 67px;
+  height: 100vh;
 }
 
 button {
@@ -8,25 +12,22 @@ button {
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  padding: 12px;
-  width: 300px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 8px 0 0 8px;
 }
 
 .sidebar-navigation {
-  background-color: #121212;
+  background-color: var(--bg-dark);
   border-radius: 8px;
-  padding: 16px 0 0 16px;
 }
 
 .sidebar-navigation .logo {
-  background: #121212;
-  display: flex;
-  border-radius: 8px;
-  padding: 16px 0 0 16px;
+  background: var(--bg-dark);
+  display: grid;
+  align-items: center;
+  border-radius: 4px;
+  padding: 20px 20px;
 }
 
 .sidebar-navigation .logo img {
@@ -34,54 +35,47 @@ button {
 }
 
 .sidebar nav ul {
-  margin-top: 20px;
-  padding: 0 20px 10px 20px;
+  padding: 12px 20px;
 }
 
 .sidebar ul li {
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 .sidebar nav ul li a {
-  color: #b3b3b3;
+  color: var(--color-primary-2);
   display: flex; /*Acrescimo meu*/
-  gap: 8px; /*Acrescimo meu*/
+  gap: 16px; /*Acrescimo meu*/
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--font-size);
 }
 
 .library {
-  background-color: #121212;
+  display: grid;
+  margin-top: 8px;
+  background-color: var(--bg-dark);
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 4px 8px;
-  color: #b3b3b3;
+  color: var(--color-primary-2);
   font-weight: 600;
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: var(--font-size);
 }
 
 .library .library-content {
   display: flex;
   justify-content: space-between;
+  padding: 0 14px;
 }
 
 .library .library-btn {
   display: flex;
-  align-items: center; /*Acrescimo meu*/
-  margin-right: 10px;
-  color: #b3b3b3;
+  align-items: center;
+  color: var(--color-primary-2);
   background-color: transparent;
   border: 0;
-  font-size: 14px;
+  font-size: var(--font-size);
   font-weight: 700;
   text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  padding: 20px 10px;
 }
 
 .library .library-btn .fa {
@@ -95,7 +89,6 @@ button {
 }
 
 .library-content .fa-plus:hover {
-  /*Acrescimo meu*/
   color: #fff;
   cursor: pointer;
 }
@@ -105,11 +98,11 @@ button {
   align-items: flex-start;
   justify-content: space-between;
   gap: 20px;
-  background-color: #242424;
-  color: #b3b3b3;
+  background-color: var(--bg-dark-secondary);
+  color: var(--color-primary-2);
   font-weight: 600;
   font-size: 14px;
-  margin: 8px 0;
+  margin: 8px;
   padding: 16px 20px;
   border-radius: 10px;
 }
@@ -120,8 +113,8 @@ button {
 }
 
 .section-playlist-content .text {
-  padding-bottom: 14px;
-  color: #fff;
+  padding-bottom: 16px;
+  color: var(--color-primary);
 }
 
 .section-playlist-content .title {
@@ -136,17 +129,15 @@ button {
 .section-playlist-content .section-playlist-btn {
   display: flex;
   justify-content: center;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--color-primary);
+  color: var(--blackout);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 700;
-  text-decoration: none;
-  text-transform: none;
-  padding: 10px;
+  padding: 12px 16px;
   margin-top: 12px;
   border: 0;
-  width: 113px;
+  max-width: max-content;
   cursor: pointer;
 }
 
@@ -155,7 +146,7 @@ button {
 }
 
 .sidebar .cookies a {
-  color: #b3b3b3;
+  color: var(--color-primary-2);
   font-weight: 500;
   font-size: 10px;
   text-decoration: none;
@@ -163,13 +154,12 @@ button {
 
 .sidebar .cookies a:hover {
   text-decoration: underline;
-  color: #fff;
+  color: var(--color-primary);
 }
 
-/*Acrescimo meu*/
 .sidebar .tags {
   display: grid;
-  padding: 16px 0;
+  padding: 16px 20px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   gap: 8px;
@@ -181,8 +171,8 @@ button {
 
 .tags .tag {
   font-weight: 400;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-primary-3);
+  border: 0.5px solid var(--color-primary-3);
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
@@ -195,54 +185,59 @@ button {
   background: transparent;
   color: #878787;
 }
-/*Fim das Tags*/
 
 .languages .languages-btn {
   align-items: center;
   background-color: transparent;
   border: 1px solid #878787;
   border-radius: 20px;
-  color: #fff;
+  color: var(--color-primary);
   font-weight: 700;
   cursor: pointer;
   width: 170px;
-  margin: 8px;
+  margin: 20px auto 20px 20px;
   padding: 8px;
 }
 
 /*Footer*/
 footer {
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  bottom: 0;
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 3/4;
 }
+
 footer .footer {
-  /*margin: 0 12px 12px 12px;*/
-  padding: 16px;
-  color: #fff;
-  font-size: 14px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 14px;
+  padding: 11px 24px 7px 15px;
   background: linear-gradient(90deg, #1d2b53, #7e2553, #ff004d, #faef5d);
 }
+
 .footer .footer-text .footer-title {
   font-weight: 700;
   text-transform: uppercase;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
+
 .footer .footer-btn {
-  display: flex;
+  display: grid;
+  max-width: max-content;
+  max-height: max-content;
   justify-content: center;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--color-primary);
+  color: var(--blackout);
   border-radius: 28px;
   font-size: 14px;
   font-weight: 700;
-  text-decoration: none;
-  text-transform: none;
   padding: 12px 20px;
   border: 0;
   cursor: pointer;
+}
+
+.hover-efect:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
 }
