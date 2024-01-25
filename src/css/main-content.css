@@ -99,4 +99,7 @@ main {
   body {
     grid-template-columns: 0.5fr 1fr;
   }
+  footer {
+    bottom: 0;
+  }
 }
