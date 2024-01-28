@@ -16,7 +16,7 @@
 }
 ::-webkit-scrollbar {
   /*Personalizar a barra de rolagem*/
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -26,4 +26,5 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-dark-secondary);
+  border-radius: 20px;
 }
